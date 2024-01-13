@@ -1,0 +1,22 @@
+
+#ifndef __estimator_attitude__idl__
+#define __estimator_attitude__idl__
+
+
+
+
+typedef float estimator_attitude__float_array_4[4];
+
+struct estimator_attitude
+{
+    unsigned long long timestamp_;
+    unsigned long long timestamp_sample_;
+    estimator_attitude__float_array_4 q;
+    estimator_attitude__float_array_4 delta_q_reset;
+    octet quat_reset_counter_;
+
+}; // struct estimator_attitude
+
+#pragma keylist estimator_attitude
+
+#endif  // __estimator_attitude__idl__

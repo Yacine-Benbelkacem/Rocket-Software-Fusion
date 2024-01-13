@@ -1,0 +1,11 @@
+prefix=/home/yacine/zero/install
+exec_prefix=${prefix}
+includedir=/home/yacine/qnx710/target/qnx7/aarch64le/include
+
+Name: asio
+Description: A cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+Version: 1.24.0
+Cflags: -I${includedir}
+Lflags:
+Requires:
+Requires.private:

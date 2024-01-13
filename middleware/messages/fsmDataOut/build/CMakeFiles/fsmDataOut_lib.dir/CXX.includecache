@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yacine/FastDDS/fsm/middleware/sharedDataOut/fsmDataOut.cxx
+fsmDataOut.h
+/home/yacine/FastDDS/fsm/middleware/sharedDataOut/fsmDataOut.h
+fastcdr/Cdr.h
+-
+fastcdr/exceptions/BadParamException.h
+-
+utility
+-
+
+/home/yacine/FastDDS/fsm/middleware/sharedDataOut/fsmDataOut.h
+stdint.h
+-
+array
+-
+string
+-
+vector
+-
+map
+-
+bitset
+-
+

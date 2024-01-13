@@ -1,0 +1,25 @@
+
+#ifndef __actuator_armed__idl__
+#define __actuator_armed__idl__
+
+
+
+
+
+struct actuator_armed
+{
+    unsigned long long timestamp_;
+    boolean armed_;
+    boolean prearmed_;
+    boolean ready_to_arm_;
+    boolean lockdown_;
+    boolean manual_lockdown_;
+    boolean force_failsafe_;
+    boolean in_esc_calibration_mode_;
+    boolean soft_stop_;
+
+}; // struct actuator_armed
+
+#pragma keylist actuator_armed
+
+#endif  // __actuator_armed__idl__

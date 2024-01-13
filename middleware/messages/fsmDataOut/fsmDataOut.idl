@@ -1,0 +1,4 @@
+struct fsmDataOut
+{
+    string state;
+};

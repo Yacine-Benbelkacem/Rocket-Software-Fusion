@@ -1,0 +1,39 @@
+
+#ifndef __actuator_controls_0__idl__
+#define __actuator_controls_0__idl__
+
+
+
+const octet actuator_controls_0__NUM_ACTUATOR_CONTROLS = 8;
+const octet actuator_controls_0__NUM_ACTUATOR_CONTROL_GROUPS = 6;
+const octet actuator_controls_0__INDEX_ROLL = 0;
+const octet actuator_controls_0__INDEX_PITCH = 1;
+const octet actuator_controls_0__INDEX_YAW = 2;
+const octet actuator_controls_0__INDEX_THROTTLE = 3;
+const octet actuator_controls_0__INDEX_FLAPS = 4;
+const octet actuator_controls_0__INDEX_SPOILERS = 5;
+const octet actuator_controls_0__INDEX_AIRBRAKES = 6;
+const octet actuator_controls_0__INDEX_LANDING_GEAR = 7;
+const octet actuator_controls_0__INDEX_GIMBAL_SHUTTER = 3;
+const octet actuator_controls_0__INDEX_CAMERA_ZOOM = 4;
+const octet actuator_controls_0__GROUP_INDEX_ATTITUDE = 0;
+const octet actuator_controls_0__GROUP_INDEX_ATTITUDE_ALTERNATE = 1;
+const octet actuator_controls_0__GROUP_INDEX_GIMBAL = 2;
+const octet actuator_controls_0__GROUP_INDEX_MANUAL_PASSTHROUGH = 3;
+const octet actuator_controls_0__GROUP_INDEX_ALLOCATED_PART1 = 4;
+const octet actuator_controls_0__GROUP_INDEX_ALLOCATED_PART2 = 5;
+const octet actuator_controls_0__GROUP_INDEX_PAYLOAD = 6;
+
+typedef float actuator_controls_0__float_array_8[8];
+
+struct actuator_controls_0
+{
+    unsigned long long timestamp_;
+    unsigned long long timestamp_sample_;
+    actuator_controls_0__float_array_8 control;
+
+}; // struct actuator_controls_0
+
+#pragma keylist actuator_controls_0
+
+#endif  // __actuator_controls_0__idl__

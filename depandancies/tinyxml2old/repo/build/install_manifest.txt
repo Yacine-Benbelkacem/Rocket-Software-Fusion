@@ -1,0 +1,8 @@
+/home/yacine/zero/install/lib/libtinyxml2.so.6.0.0
+/home/yacine/zero/install/lib/libtinyxml2.so.6
+/home/yacine/zero/install/lib/libtinyxml2.so
+/home/yacine/zero/install/include/tinyxml2.h
+/home/yacine/zero/install/lib/pkgconfig/tinyxml2.pc
+/home/yacine/zero/install/lib/cmake/tinyxml2/tinyxml2Config.cmake
+/home/yacine/zero/install/lib/cmake/tinyxml2/tinyxml2Targets.cmake
+/home/yacine/zero/install/lib/cmake/tinyxml2/tinyxml2Targets-noconfig.cmake

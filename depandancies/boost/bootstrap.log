@@ -1,0 +1,139 @@
+###
+### Using 'gcc' toolset.
+###
+rm -rf bootstrap
+mkdir bootstrap
+gcc -o bootstrap/jam0 command.c compile.c constants.c debug.c execcmd.c frames.c function.c glob.c hash.c hdrmacro.c headers.c jam.c jambase.c jamgram.c lists.c make.c make1.c object.c option.c output.c parse.c pathsys.c regexp.c rules.c scan.c search.c subst.c timestamp.c variable.c modules.c strings.c filesys.c builtins.c class.c cwd.c native.c md5.c w32_getreg.c modules/set.c modules/path.c modules/regex.c modules/property-set.c modules/sequence.c modules/order.c execunix.c fileunix.c pathunix.c
+execcmd.c: In function ‘onintr’:
+execcmd.c:120:5: warning: implicit declaration of function ‘out_printf’ [-Wimplicit-function-declaration]
+  120 |     out_printf( "...interrupted\n" );
+      |     ^~~~~~~~~~
+jam.c: In function ‘main’:
+jam.c:669:5: warning: implicit declaration of function ‘exec_done’; did you mean ‘regex_done’? [-Wimplicit-function-declaration]
+  669 |     exec_done();
+      |     ^~~~~~~~~
+      |     regex_done
+make.c: In function ‘make’:
+make.c:105:5: warning: implicit declaration of function ‘exec_init’ [-Wimplicit-function-declaration]
+  105 |     exec_init();
+      |     ^~~~~~~~~
+make.c:136:13: warning: implicit declaration of function ‘out_printf’ [-Wimplicit-function-declaration]
+  136 |             out_printf( "...found %d target%s...\n", counts->targets,
+      |             ^~~~~~~~~~
+make.c: In function ‘make0’:
+make.c:739:13: warning: implicit declaration of function ‘out_flush’ [-Wimplicit-function-declaration]
+  739 |             out_flush();
+      |             ^~~~~~~~~
+filesys.c: In function ‘file_archivescan_impl’:
+filesys.c:360:10: warning: implicit declaration of function ‘filelist_empty’; did you mean ‘filelist_next’? [-Wimplicit-function-declaration]
+  360 |     if ( filelist_empty( archive->members ) )
+      |          ^~~~~~~~~~~~~~
+      |          filelist_next
+modules/path.c: In function ‘path_exists’:
+modules/path.c:16:12: warning: implicit declaration of function ‘file_query’ [-Wimplicit-function-declaration]
+   16 |     return file_query( list_front( lol_get( frame->args, 0 ) ) ) ?
+      |            ^~~~~~~~~~
+fileunix.c: In function ‘file_archscan’:
+fileunix.c:236:10: warning: implicit declaration of function ‘filelist_empty’; did you mean ‘filelist_next’? [-Wimplicit-function-declaration]
+  236 |     if ( filelist_empty( archive->members ) )
+      |          ^~~~~~~~~~~~~~
+      |          filelist_next
+fileunix.c:238:14: warning: implicit declaration of function ‘file_collect_archive_content_’; did you mean ‘file_collect_dir_content_’? [-Wimplicit-function-declaration]
+  238 |         if ( file_collect_archive_content_( archive ) < 0 )
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              file_collect_dir_content_
+./bootstrap/jam0 -f build.jam --toolset=gcc --toolset-root= clean
+...found 1 target...
+...updating 1 target...
+[DELETE] clean
+...updated 1 target...
+./bootstrap/jam0 -f build.jam --toolset=gcc --toolset-root=
+...found 160 targets...
+...updating 2 targets...
+[COMPILE] bin.linuxx86_64/b2
+debugger.c: In function ‘debug_print_frame’:
+debugger.c:402:17: warning: too many arguments for format [-Wformat-extra-args]
+  402 |         printf( "( ", frame->rulename );
+      |                 ^~~~
+debugger.c: In function ‘debug_print_frame_info’:
+debugger.c:431:17: warning: too many arguments for format [-Wformat-extra-args]
+  431 |         printf( "( ", frame->rulename );
+      |                 ^~~~
+debugger.c: In function ‘debug_start_child’:
+debugger.c:1180:5: warning: implicit declaration of function ‘pipe’ [-Wimplicit-function-declaration]
+ 1180 |     pipe(pipe1);
+      |     ^~~~
+debugger.c:1182:11: warning: implicit declaration of function ‘fork’ [-Wimplicit-function-declaration]
+ 1182 |     pid = fork();
+      |           ^~~~
+debugger.c:1186:9: warning: implicit declaration of function ‘close’; did you mean ‘pclose’? [-Wimplicit-function-declaration]
+ 1186 |         close( pipe1[ 0 ] );
+      |         ^~~~~
+      |         pclose
+debugger.c: In function ‘debug_mi_format_breakpoint’:
+debugger.c:1776:13: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+ 1776 |     printf( "" );
+      |             ^~
+debugger.c: In function ‘run_command’:
+debugger.c:2627:12: warning: implicit declaration of function ‘isdigit’ [-Wimplicit-function-declaration]
+ 2627 |     while( isdigit( *command_name ) ) ++command_name;
+      |            ^~~~~~~
+debugger.c: In function ‘process_command’:
+debugger.c:2654:26: warning: implicit declaration of function ‘isspace’ [-Wimplicit-function-declaration]
+ 2654 |         while ( *iter && isspace( *iter ) )
+      |                          ^~~~~~~
+debugger.c: In function ‘debug_list_read’:
+debugger.c:163:5: warning: ignoring return value of ‘fscanf’, declared with attribute warn_unused_result [-Wunused-result]
+  163 |     fscanf( in, "%d", &len );
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+execcmd.c: In function ‘onintr’:
+execcmd.c:120:5: warning: implicit declaration of function ‘out_printf’ [-Wimplicit-function-declaration]
+  120 |     out_printf( "...interrupted\n" );
+      |     ^~~~~~~~~~
+execcmd.c: In function ‘argv_from_shell’:
+execcmd.c:54:22: warning: ‘%d’ directive writing between 1 and 11 bytes into a region of size 4 [-Wformat-overflow=]
+   54 |     sprintf( jobno, "%d", slot + 1 );
+      |                      ^~
+execcmd.c:54:21: note: directive argument in the range [-2147483647, 2147483647]
+   54 |     sprintf( jobno, "%d", slot + 1 );
+      |                     ^~~~
+In file included from /usr/include/stdio.h:867,
+                 from jam.h:340,
+                 from execcmd.c:11:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:36:10: note: ‘__builtin___sprintf_chk’ output between 2 and 12 bytes into a destination of size 4
+   36 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   37 |       __bos (__s), __fmt, __va_arg_pack ());
+      |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jam.c: In function ‘main’:
+jam.c:669:5: warning: implicit declaration of function ‘exec_done’; did you mean ‘regex_done’? [-Wimplicit-function-declaration]
+  669 |     exec_done();
+      |     ^~~~~~~~~
+      |     regex_done
+make.c: In function ‘make’:
+make.c:105:5: warning: implicit declaration of function ‘exec_init’ [-Wimplicit-function-declaration]
+  105 |     exec_init();
+      |     ^~~~~~~~~
+make.c:136:13: warning: implicit declaration of function ‘out_printf’ [-Wimplicit-function-declaration]
+  136 |             out_printf( "...found %d target%s...\n", counts->targets,
+      |             ^~~~~~~~~~
+filesys.c: In function ‘file_archivescan_impl’:
+filesys.c:360:10: warning: implicit declaration of function ‘filelist_empty’; did you mean ‘filelist_next’? [-Wimplicit-function-declaration]
+  360 |     if ( filelist_empty( archive->members ) )
+      |          ^~~~~~~~~~~~~~
+      |          filelist_next
+modules/path.c: In function ‘path_exists’:
+modules/path.c:16:12: warning: implicit declaration of function ‘file_query’ [-Wimplicit-function-declaration]
+   16 |     return file_query( list_front( lol_get( frame->args, 0 ) ) ) ?
+      |            ^~~~~~~~~~
+fileunix.c: In function ‘file_archscan’:
+fileunix.c:236:10: warning: implicit declaration of function ‘filelist_empty’; did you mean ‘filelist_next’? [-Wimplicit-function-declaration]
+  236 |     if ( filelist_empty( archive->members ) )
+      |          ^~~~~~~~~~~~~~
+      |          filelist_next
+fileunix.c:238:14: warning: implicit declaration of function ‘file_collect_archive_content_’; did you mean ‘file_collect_dir_content_’? [-Wimplicit-function-declaration]
+  238 |         if ( file_collect_archive_content_( archive ) < 0 )
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |              file_collect_dir_content_
+[COPY] bin.linuxx86_64/bjam
+...updated 2 targets...

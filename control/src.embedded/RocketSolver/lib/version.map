@@ -1,0 +1,6 @@
+GLIBC_2.17 {
+    global:
+        *;
+    local:
+        __isoc99_fscanf;
+};

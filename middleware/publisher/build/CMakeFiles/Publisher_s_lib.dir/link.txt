@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPublisher_s_lib.a  CMakeFiles/Publisher_s_lib.dir/Publisher_s.cxx.o
+/usr/bin/ranlib libPublisher_s_lib.a

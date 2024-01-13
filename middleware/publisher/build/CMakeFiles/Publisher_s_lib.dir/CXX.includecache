@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yacine/FastDDS/middleware/publisher/Publisher_s.cxx
+Publisher_s.h
+/home/yacine/FastDDS/middleware/publisher/Publisher_s.h
+
+/home/yacine/FastDDS/middleware/publisher/Publisher_s.h
+fastrtps/fastrtps_fwd.h
+-
+fastrtps/publisher/PublisherListener.h
+-
+fastrtps/participant/Participant.h
+-
+fastrtps/attributes/ParticipantAttributes.h
+-
+fastrtps/publisher/Publisher.h
+-
+fastrtps/attributes/PublisherAttributes.h
+-
+fastrtps/Domain.h
+-
+fastrtps/TopicDataType.h
+-
+thread
+-
+chrono
+-
+
